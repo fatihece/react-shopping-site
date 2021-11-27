@@ -1,9 +1,11 @@
 import "./App.css";
+import Dashboard from "./layouts/Dashboard";
+import "semantic-ui-css/semantic.min.css";
 
 function App() {
   return (
     <div className="App">
-      <h2>Shopping center</h2>
+      <Dashboard />
     </div>
   );
 }
