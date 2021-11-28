@@ -1,11 +1,17 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import { Button, Menu } from "semantic-ui-react";
 
-const SignOut = () => {
+const SignOut = ({ signIn }) => {
   return (
     <div>
-      <Button>Giriş Yap</Button>
-      <Button>Kayıt Ol</Button>
+      <Menu.Item>
+        <Button onClick={signIn} primary>
+          Log In
+        </Button>
+        <Button primary style={{ marginLeft: "0.5em" }}>
+          Sign In
+        </Button>
+      </Menu.Item>
     </div>
   );
 };
