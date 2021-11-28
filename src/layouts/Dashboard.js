@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import { Grid } from "semantic-ui-react";
 import { Route, Routes } from "react-router";
 import ProductDetail from "../pages/ProductDetail";
+import CartDetail from "../pages/CartDetail";
 
 const Dashboard = () => {
   return (
@@ -17,7 +18,8 @@ const Dashboard = () => {
             <Routes>
               <Route path="/" exact element={<ProductList />} />
               <Route path="/products" exact element={<ProductList />} />
-              <Route path="/products/1" element={<ProductDetail />} />
+              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/cart" element={<CartDetail />} />
             </Routes>
           </Grid.Column>
         </Grid.Row>
