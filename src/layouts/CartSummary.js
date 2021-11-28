@@ -5,7 +5,7 @@ const CartSummary = () => {
   return (
     <div>
       {" "}
-      <Dropdown item text="Language">
+      <Dropdown item text="Language" style={{ marginTop: ".5em" }}>
         <Dropdown.Menu>
           <Dropdown.Item>English</Dropdown.Item>
           <Dropdown.Item>Russian</Dropdown.Item>
