@@ -1,3 +1,3 @@
 export const cartItems = [
-  { quantity: 1, product: { productTitle: "sneakers" } },
+  { quantity: 5, product: { productTitle: "Sneakers" } },
 ];
