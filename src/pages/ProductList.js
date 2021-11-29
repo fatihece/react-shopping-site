@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Icon, Menu, Table, Button } from "semantic-ui-react";
+import { Icon, Menu, Table, Button, Image } from "semantic-ui-react";
 // import ProductService from "../services/productService";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -16,6 +16,10 @@ const ProductList = () => {
     dispatch(addToCart(product));
     toast.info(`${product.title} added to cart successfuly!`);
   };
+
+  // const handleRemoveItemfromCart = (product) => {
+  //   dispatch(removeFromCart(product));
+  // };
 
   // -----second way of calling an api-----
   // useEffect(() => {
@@ -35,6 +39,7 @@ const ProductList = () => {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Title</Table.HeaderCell>
+            <Table.HeaderCell>Image</Table.HeaderCell>
             <Table.HeaderCell>Price</Table.HeaderCell>
             <Table.HeaderCell>Category</Table.HeaderCell>
             <Table.HeaderCell>Description</Table.HeaderCell>
@@ -47,6 +52,10 @@ const ProductList = () => {
             <Table.Row key={product.id}>
               <Table.Cell>
                 <Link to={`products/${product.id}`}>{product.title}</Link>
+              </Table.Cell>
+              <Table.Cell>
+                {" "}
+                <Image src={product.image} rounded size="mini" />
               </Table.Cell>
               <Table.Cell>{product.price}$</Table.Cell>
               <Table.Cell>{product.category}</Table.Cell>

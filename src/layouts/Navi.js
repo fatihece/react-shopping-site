@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Menu } from "semantic-ui-react";
 import CartSummary from "./CartSummary";
 import SignedIn from "./SignedIn";
@@ -24,7 +24,9 @@ const Navi = () => {
     <div>
       <Menu inverted fixed="top">
         <Container>
-          <Menu.Item name="home" />
+          <Menu.Item name="home">
+            <Link to="/">Home</Link>
+          </Menu.Item>
           <Menu.Item name="messages" />
           <Menu.Menu position="right">
             {cartItems.length > 0 && <CartSummary />}

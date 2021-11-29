@@ -18,18 +18,13 @@ const ProductDetail = () => {
       <Card.Group>
         <Card fluid>
           <Card.Content>
-            {/* <Image
-              floated="right"
-              size="large"
-              src="/images/avatar/large/steve.jpg"
-            /> */}
             <Card.Header>{product.title}</Card.Header>
             <Card.Meta style={{ textTransform: "capitalize" }}>
               {product.category}
             </Card.Meta>
             <Card.Description>{product.description}</Card.Description>
           </Card.Content>
-          <Card.Content extra>
+          {/* <Card.Content extra>
             <div className="ui two buttons">
               <Button basic color="green">
                 Approve
@@ -38,7 +33,7 @@ const ProductDetail = () => {
                 Decline
               </Button>
             </div>
-          </Card.Content>
+          </Card.Content> */}
         </Card>
       </Card.Group>
     </div>

@@ -28,6 +28,5 @@ export default function cartReducer(state = initialState, { type, payload }) {
       };
     default:
       return state;
-      break;
   }
 }
