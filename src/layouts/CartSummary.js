@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Dropdown, Label } from "semantic-ui-react";
 import { useSelector } from "react-redux";
-import { cartItems } from "../store/initialValues/cartItems";
 
 const CartSummary = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -13,7 +12,7 @@ const CartSummary = () => {
         <Dropdown.Menu>
           {cartItems.map((cartItem) => (
             <Dropdown.Item>
-              {cartItem.product.productTitle}
+              {cartItem.product.title}
               <Label style={{ marginLeft: "5px", backgroundColor: "blue" }}>
                 {cartItem.quantity}
               </Label>
