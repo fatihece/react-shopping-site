@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { Button, Card } from "semantic-ui-react";
 import axios from "axios";
 
@@ -24,7 +24,9 @@ const ProductDetail = () => {
               src="/images/avatar/large/steve.jpg"
             /> */}
             <Card.Header>{product.title}</Card.Header>
-            <Card.Meta>{product.category}</Card.Meta>
+            <Card.Meta style={{ textTransform: "capitalize" }}>
+              {product.category}
+            </Card.Meta>
             <Card.Description>{product.description}</Card.Description>
           </Card.Content>
           <Card.Content extra>

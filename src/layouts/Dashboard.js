@@ -2,7 +2,7 @@ import React from "react";
 import ProductList from "../pages/ProductList";
 import Categories from "./Categories";
 import { Grid } from "semantic-ui-react";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import ProductDetail from "../pages/ProductDetail";
 import CartDetail from "../pages/CartDetail";
 
