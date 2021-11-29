@@ -5,6 +5,7 @@ import { Icon, Menu, Table, Button } from "semantic-ui-react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/actions/CartActions";
+import { toast } from "react-toastify";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -13,6 +14,7 @@ const ProductList = () => {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
+    toast.info(`${product.title} added to cart successfuly!`);
   };
 
   // -----second way of calling an api-----

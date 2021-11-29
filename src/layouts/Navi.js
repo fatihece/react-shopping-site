@@ -29,6 +29,7 @@ const Navi = () => {
           <Menu.Menu position="right">
             {cartItems.length > 0 && <CartSummary />}
             {/* CartSummary nin eleman sayısı 0'dan büyükse render et. Değer 0 ise, yani sepet(cart) boş ise gösterme. */}
+
             {isAuthenticated ? (
               <SignedIn signOut={handleSignOut} />
             ) : (
