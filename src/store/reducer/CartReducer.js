@@ -2,7 +2,8 @@ import { cartItems } from "../initialValues/cartItems";
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/CartActions";
 
 const initialState = {
-  cartItems: cartItems,
+  cartItems: [],
+  // products : [],
 };
 
 export default function cartReducer(state = initialState, { type, payload }) {
@@ -22,11 +23,29 @@ export default function cartReducer(state = initialState, { type, payload }) {
       }
 
     case REMOVE_FROM_CART:
-      return {
-        ...state,
-        cartItems: state.cartItems.filter((c) => c.product.id !== payload.id),
-      };
+      let removedProduct = state.cartItems.find(
+        (c) => c.product.id === payload.id
+      );
+      if (removedProduct.quantity > 1) {
+        removedProduct.quantity--;
+        return {
+          ...state,
+          cartItems: [...state.cartItems],
+        };
+      } else {
+        return {
+          ...state,
+          cartItems: state.cartItems.filter((c) => c.product.id !== payload.id),
+        };
+      }
+
+    // return {
+    //   ...state,
+    //   cartItems: state.cartItems.filter((c) => c.product.id !== payload.id),
+    // };
     default:
       return state;
   }
 }
+
+export const cartSelector = (state) => state.cart.cartItems;

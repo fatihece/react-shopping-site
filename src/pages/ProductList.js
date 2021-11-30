@@ -61,8 +61,15 @@ const ProductList = () => {
               <Table.Cell>{product.category}</Table.Cell>
               <Table.Cell>{product.description}</Table.Cell>
               <Table.Cell>
-                <Button onClick={() => handleAddToCart(product)}>
-                  Add to Cart
+                <Button
+                  animated="vertical"
+                  onClick={() => handleAddToCart(product)}
+                  color="blue"
+                >
+                  <Button.Content hidden>Shop</Button.Content>
+                  <Button.Content visible>
+                    <Icon name="shop" />
+                  </Button.Content>
                 </Button>
               </Table.Cell>
             </Table.Row>

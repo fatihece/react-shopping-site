@@ -3,9 +3,10 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Button, Label, List, Image, Table, Header } from "semantic-ui-react";
 import { removeFromCart } from "../store/actions/CartActions";
+import { cartSelector } from "../store/reducer/cartReducer";
 
 const CartDetail = () => {
-  const cartItems = useSelector((state) => state.cart.cartItems);
+  const cartItems = useSelector(cartSelector);
   const dispatch = useDispatch();
   console.log(cartItems);
 
@@ -31,6 +32,8 @@ const CartDetail = () => {
               <Table.Cell>
                 <Button
                   onClick={() => dispatch(removeFromCart(cartItem.product))}
+                  content="danger"
+                  color="red"
                 >
                   Delete
                 </Button>
