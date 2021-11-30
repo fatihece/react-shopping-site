@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 const Dashboard = () => {
   return (
     <div>
-      <ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" autoClose={1000} />
       <Grid>
         <Grid.Row>
           <Grid.Column width={4}>
