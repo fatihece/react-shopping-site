@@ -1,4 +1,3 @@
-import { cartItems } from "../initialValues/cartItems";
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/CartActions";
 
 const initialState = {
