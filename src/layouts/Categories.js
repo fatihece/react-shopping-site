@@ -6,6 +6,7 @@ const Categories = () => {
     <div>
       {" "}
       <Menu pointing vertical>
+        <h3 style={{ marginTop: "0.6em" }}>Categories</h3>
         <Menu.Item name="Men's Clothing" />
         <Menu.Item name="Women's Clothing" />
         <Menu.Item name="Jewelery" />
