@@ -6,9 +6,9 @@ const Categories = () => {
     <div>
       {" "}
       <Menu pointing vertical>
-        <Menu.Item name="home" />
-        <Menu.Item name="messages" />
-        <Menu.Item name="friends" />
+        <Menu.Item name="Men's Clothing" />
+        <Menu.Item name="Jewelery" />
+        <Menu.Item name="Electronics" />
       </Menu>
     </div>
   );
