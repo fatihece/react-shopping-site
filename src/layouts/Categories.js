@@ -7,6 +7,7 @@ const Categories = () => {
       {" "}
       <Menu pointing vertical>
         <Menu.Item name="Men's Clothing" />
+        <Menu.Item name="Women's Clothing" />
         <Menu.Item name="Jewelery" />
         <Menu.Item name="Electronics" />
       </Menu>
