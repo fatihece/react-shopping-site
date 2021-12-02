@@ -18,7 +18,7 @@ const CartDetail = () => {
             <Table.Row>
               <Table.Cell>
                 <Header as="h4" image>
-                  <Image src={cartItem.product.image} rounded size="mini" />
+                  <Image src={cartItem.product.image} rounded size="large" />
                   <Header.Content>
                     {cartItem.product.title}
                     <Header.Subheader>

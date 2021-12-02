@@ -13,7 +13,7 @@ const CartSummary = () => {
           {cartItems.map((cartItem) => (
             <Dropdown.Item>
               {cartItem.product.title}
-              <Label style={{ marginLeft: "5px", backgroundColor: "blue" }}>
+              <Label style={{ marginLeft: "5px", backgroundColor: "#3498db" }}>
                 {cartItem.quantity}
               </Label>
             </Dropdown.Item>
