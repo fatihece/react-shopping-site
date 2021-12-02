@@ -13,6 +13,16 @@ const CartDetail = () => {
   return (
     <div>
       <Table basic="very" celled collapsing>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell colSpan="3" warning>
+              {" "}
+              {`You have ${cartItems.length} product${
+                cartItems.length > 1 ? "s" : ""
+              } in your cart `}
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
         {cartItems.map((cartItem) => (
           <Table.Body>
             <Table.Row>

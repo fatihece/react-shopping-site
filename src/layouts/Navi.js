@@ -22,7 +22,7 @@ const Navi = () => {
 
   return (
     <div>
-      <Menu inverted fixed="top">
+      <Menu color="blue" inverted fixed="top">
         <Container>
           <Menu.Item name="home">
             <Link to="/">Home</Link>
